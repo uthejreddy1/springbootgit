@@ -16,7 +16,7 @@ spec:
         - name: myapp
           image: 992382642635.dkr.ecr.us-east-1.amazonaws.com/springboot:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
 
 ---
 apiVersion: v1
@@ -29,5 +29,5 @@ spec:
   ports:
     - protocol: TCP
       port: 8081
-      targetPort: 8080
+      targetPort: 8081
   type: LoadBalancer
