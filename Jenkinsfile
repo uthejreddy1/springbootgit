@@ -5,18 +5,20 @@ pipeline {
     }
     
     environment {
-        GITHUB_REPO = 'https://github.com/uthejreddy1/springbootgit.git'
+        //GITHUB_REPO = 'https://github.com/uthejreddy1/springbootgit.git'
        IMAGE_NAME = 'springboot:latest'
         //KUBE_CONFIG = '/home/ec2-user/.kube/config'
     }
     
     stages {
         
-        stage('Checkout Code') {
+    stages {
+        stage('Checkout') {
             steps {
-                git branch: 'main', url: "${GITHUB_REPO}"
+                script {
+                    checkout scm
+                }
             }
-        }
         
         stage('Build Maven') {
             steps {
