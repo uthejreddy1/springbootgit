@@ -6,4 +6,4 @@
 
 # Configure kubectl to Use the EKS Cluster
 
-```aws eks --region us-east-2 update-kubeconfig --name javatechie-cluster```
+```aws eks --region us-east-2 update-kubeconfig --name demo-cluster```
